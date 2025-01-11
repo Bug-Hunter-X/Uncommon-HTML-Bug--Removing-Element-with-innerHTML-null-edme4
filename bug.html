@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Incorrectly setting innerHTML to null.  This removes the div element
+      // rather than just clearing its content.
+      document.getElementById("myDiv").innerHTML = null; 
+    }
+  </script>
+</body>
+</html>
