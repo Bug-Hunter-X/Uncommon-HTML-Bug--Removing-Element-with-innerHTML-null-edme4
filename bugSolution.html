@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      // Correct way to clear the content of the div element
+      document.getElementById("myDiv").innerHTML = ''; 
+      //Alternative solution using textContent
+      // document.getElementById("myDiv").textContent = '';
+    }
+  </script>
+</body>
+</html>
